@@ -1,0 +1,26 @@
+@import '../../assets/styles/variables';
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 3rem;
+}
+
+.container {
+  display: flex;
+  height: 68rem;
+  width: 100%;
+  max-height: 68rem;
+  max-width: 160rem;
+
+  border-radius: $border-radius-medium;
+  overflow: hidden;
+}
+
+.main {
+  background-color: var(--color-bg-dashboard);
+  padding: 2.5rem;
+  flex: 1 1 120rem;
+}

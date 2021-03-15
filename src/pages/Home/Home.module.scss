@@ -1,0 +1,118 @@
+@import '../../assets/styles/variables';
+@import '../../assets/styles/animations';
+
+.home {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 50rem;
+  height: 40rem;
+  padding: 3rem;
+}
+
+.logo {
+  display: flex;
+  transform: translateY(-50%);
+
+  svg {
+    height: 10rem;
+    width: 10rem;
+    color: var(--color-primary);
+  }
+
+  &Animated {
+    -webkit-animation: moveInLogo 0.5s ease-out 0.75s;
+    animation: moveInLogo 0.5s ease-out 0.75s;
+    -webkit-animation-fill-mode: backwards;
+    animation-fill-mode: backwards;
+  }
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+
+  width: 100%;
+}
+
+.btn {
+  &,
+  &:link,
+  &:visited {
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 1.5rem 4rem;
+    display: inline-block;
+    border-radius: $border-radius-action;
+    transition: all 0.2s;
+    position: relative;
+    font-size: $font-size-default;
+    border: none;
+    cursor: pointer;
+    width: 20rem;
+    text-align: center;
+  }
+
+  &:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 1rem 2rem var(--color-primary-dark);
+
+    &::after {
+      transform: scaleX(1.2) scaleY(1.4);
+      opacity: 0;
+    }
+  }
+
+  &:active,
+  &:focus {
+    outline: none;
+    transform: translateY(-1px);
+    box-shadow: 0 0.5rem 1rem var(--color-primary-dark);
+  }
+
+  &Primary {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+
+    &::after {
+      background-color: var(--color-primary);
+    }
+  }
+
+  &Secondary {
+    background-color: var(--color-primary-dark);
+    color: var(--color-white);
+
+    &::after {
+      background-color: var(--color-primary-dark);
+    }
+  }
+
+  &::after {
+    content: '';
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    border-radius: $border-radius-action;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: all 0.4s;
+  }
+
+  &Animated {
+    -webkit-animation: moveInBottom 0.5s ease-out 0.75s;
+    animation: moveInBottom 0.5s ease-out 0.75s;
+    -webkit-animation-fill-mode: backwards;
+    animation-fill-mode: backwards;
+  }
+}

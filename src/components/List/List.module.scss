@@ -1,0 +1,56 @@
+@import '../../assets/styles/variables';
+
+.section {
+  height: 100%;
+  overflow: auto; // novo
+}
+
+// novo
+.tableContainer {
+  height: 100%;
+  // overflow: auto;
+  overflow: visible;
+}
+
+// novo
+.table {
+  // height: 100%;
+  width: 100%;
+  border-collapse: collapse;
+  // line-height: 1rem;
+  font-size: $font-size-default;
+  background-color: var(--color-white);
+  // overflow: hidden;
+  overflow: unset;
+  word-wrap: break-word;
+}
+
+.heading {
+  font-size: $font-size-large;
+}
+
+.tbHeading,
+.tbData {
+  padding: 8px;
+  text-align: center;
+  width: 10rem;
+  line-height: 2rem;
+}
+
+.tbHeading {
+  padding-top: 1.2rem;
+  padding-bottom: 1.2rem;
+  text-align: center;
+  background-color: var(--color-primary);
+  color: var(--color-white);
+}
+
+// novo
+.tbRow {
+  max-height: 10rem !important;
+  height: 1rem !important;
+}
+
+.tbRow:nth-child(even) {
+  background-color: var(--color-tertiary-light-1);
+}

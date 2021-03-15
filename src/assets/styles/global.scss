@@ -1,0 +1,77 @@
+// COLOR VARIABLES
+:root {
+  --color-bg-body: #d0dfff;
+  --color-bg-dashboard: #d9e5ff;
+
+  --color-primary: #5766b5;
+  --color-primary-light-1: #baccfd;
+  --color-primary-light-2: #b9c0de;
+  --color-primary-dark: #353e6c;
+
+  --color-secondary: #1657ff;
+  --color-secondary-light: #276bf0;
+
+  --color-tertiary-light-1: #e9efff;
+  --color-tertiary-light-2: #edf2ff;
+
+  --color-auxiliar: #5236ff;
+
+  --color-white: #ffffff;
+  --color-black: #000000;
+
+  --color-grey-light-1: #f7f7f7;
+  --color-grey-light-2: #eeeeee;
+
+  --color-grey-dark-1: #777777;
+  --color-grey-dark-2: #999999;
+  --color-grey-dark-3: #333333;
+
+  --color-danger: #ff6347;
+}
+
+@import './variables';
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+*:focus {
+  outline: 0;
+}
+
+html {
+  height: 100%;
+  font-size: 62.5%; // 10px / 16px = 0,625 * 100% = 62.5% -> 1rem = 10px
+}
+
+body,
+#root {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-weight: 300;
+  line-height: 1.6;
+  height: inherit;
+  font-family: $font-primary;
+  background: var(--color-bg-body);
+}
+
+input,
+button {
+  font-family: 'Roboto', 'Segoe UI', Verdana, Arial, sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+button {
+  cursor: pointer;
+}

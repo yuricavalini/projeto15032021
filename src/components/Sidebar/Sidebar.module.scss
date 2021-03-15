@@ -1,0 +1,140 @@
+@import '../../assets/styles/variables';
+
+.sidebar {
+  background: linear-gradient(
+    270deg,
+    rgba(255, 255, 255, 0.64) 0%,
+    rgba(255, 255, 255, 0.64) 100%
+  );
+  padding: 2.5rem 0;
+  flex: 0 0 20rem;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+
+  & > * {
+    margin-bottom: 2rem;
+  }
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+
+  svg {
+    height: 10rem;
+    width: 10rem;
+    color: var(--color-primary);
+  }
+}
+
+.listItem {
+  font-size: $font-size-default;
+  list-style: none;
+  margin: 0 0 0.5rem 2rem;
+  border-top-left-radius: $border-radius-medium;
+  border-bottom-left-radius: $border-radius-medium;
+  overflow: hidden;
+  position: relative;
+
+  & > :first-child {
+    &::after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 100%;
+      height: 80%;
+      width: 10px;
+      background-color: var(--color-secondary);
+      transform: translateX(0px) translateY(-50%);
+      border-radius: 5px;
+      opacity: 0;
+      visibility: hidden;
+    }
+  }
+
+  &:hover > :first-child {
+    color: var(--color-secondary);
+    background-color: var(--color-tertiary-light-1);
+    transition: all 0.5s;
+
+    &::after {
+      opacity: 1;
+      transform: translateX(-3px) translateY(-50%);
+      box-shadow: -2px 0px 10px 2px rgba(0, 56, 255, 0.15);
+      visibility: visible;
+      transition: all 0.5s;
+    }
+  }
+}
+
+.link {
+  &:link,
+  &:visited {
+    color: var(--color-primary-light-2);
+    text-decoration: none;
+    padding: 10px 0 10px 10px;
+    z-index: 10;
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+
+  svg {
+    margin-right: 1rem;
+  }
+}
+
+.adm {
+  padding: 1rem;
+  display: flex;
+  text-align: center;
+}
+
+.btnContainer {
+  margin-top: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 0 1rem;
+  flex-direction: column;
+
+  & > * {
+    margin-top: 1rem;
+  }
+
+  & > *:not(:last-child) {
+    margin-bottom: 1rem;
+  }
+}
+
+.btn {
+  display: flex;
+  border: none;
+  border-radius: $border-radius-medium;
+  cursor: pointer;
+  background-color: var(--color-primary-light-2);
+  padding: 3px 50px;
+  transition: all 0.5s;
+  color: var(--color-grey-light-1);
+
+  svg {
+    height: 3.5rem;
+    width: 3.5rem;
+    color: var(--color-grey-light-1);
+  }
+
+  &:hover {
+    background-color: var(--color-secondary-light);
+  }
+}
+
+.btnPadding {
+  padding: 5px 30px !important;
+}
+
+.active {
+  color: red;
+}
